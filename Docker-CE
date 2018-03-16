@@ -1,0 +1,9 @@
+# Installation steps as at 16/03/2018
+
+# Original link, follow instructions for xenial 16.04 and newer, using repository method
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+# Post installation configuration
+# source: https://docs.docker.com/install/linux/linux-postinstall/
+# start on boot
+sudo systemctl enable docker
