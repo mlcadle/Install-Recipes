@@ -80,7 +80,7 @@ Errors on license validation.. seems to be poorly maintained post graphlab sale 
 pip install --upgrade --no-cache-dir https://get.graphlab.com/GraphLab-Create/2.1/<email>/<productkey>/GraphLab-Create-License.tar=.gz
 ```
 
-#### 2.8 Uninstall
+### 2.8 Uninstall
 ```
 conda uninstall -n gl-env python anaconda
 ```
