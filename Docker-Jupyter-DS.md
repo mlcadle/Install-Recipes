@@ -24,6 +24,7 @@ graphlab.product_key.get_product_key()
 sudo docker run -d -p 8888:8888 jupyter/datascience-notebook start-notebook.sh --NotebookApp.token=''
 ```
 
+#
 # Option 2 Install via Anaconda
 - attempt based on instructions from Uni of Washington's ML course,  this approach errors on graphlab install, is not dockerised and contains runs on pretty old versions of python/etc.
 ### 2.1 Download Anaconda
@@ -53,7 +54,8 @@ source ~/.bashrc
 conda list
 ```
 
-### 2.6 Revert to turi installation steps https://turi.com/download/install-graphlab-create-command-line.html
+### 2.6 Revert to turi installation steps
+link: https://turi.com/download/install-graphlab-create-command-line.html
 
 #### 2.6.1 Create a new conda environment with Python 2.7.x
 ```
