@@ -1,31 +1,29 @@
-# Installation steps
-# 16/03/2018 - Testing inclusion of ML package into dockerised Jupyter DS image
-
-# Option 1: Docker Package https://hub.docker.com/r/jupyter/datascience-notebook/
-Recreate image to include graphlab                                             
-###1.1 Run without enforcing token (--NotebookApp.token='')
+# Option 1: Docker Package 
+Recreate image from https://hub.docker.com/r/jupyter/datascience-notebook/ to include graphlab                                         
+### 1.1 Run without enforcing token (--NotebookApp.token='')
 The -i tells docker to attach stdin to the container
 The -t tells docker to give us a pseudo-terminal
 /bin/bash will run a terminal process in your container
 ```
 sudo docker run -it -p 8888:8888 jupyter/datascience-notebook start-notebook.sh --NotebookApp.token='' /bin/bash
 ```
-###1.2 Download graphlab to local 
+### 1.2 Download graphlab to local 
 Nb. download link below should have email and token inserted (can be obtained from https://turi.com/download/academic.html)
 ```
 wget https://get.graphlab.com/GraphLab-Create/2.1/<email>/<token>/GraphLab-Create-License.tar.gz
 pip install --upgrade --no-cache-dir GraphLab-Create-License.tar.gz
 ```
 
-###1.3 Exit container and commit to repo jupyter/datascience-notebook:latest
+### 1.3 Exit container and commit to repo jupyter/datascience-notebook:latest
 ```
 sudo docker commit <containerId> <repository:tag>
 ```
 
-###1.4 Run image in detached mode and without enforcing token
+### 1.4 Run image in detached mode and without enforcing token
 ```
 sudo docker run -d -p 8888:8888 jupyter/datascience-notebook start-notebook.sh --NotebookApp.token=''
 ```
+
 ##################################################################################
 # Option 2 Install via Anaconda - attempt based on instructions from             #
 # Uni of Washington's ML course,  this approach errors on graphlab install       #
